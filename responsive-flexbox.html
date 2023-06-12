@@ -1,0 +1,104 @@
+  <!--https://www.w3schools.com/css/css3_flexbox_responsive.asp-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Flexbox Responsive</title>
+      <!--example of Internal CSS located in the head section-->
+<style>
+
+* {
+  box-sizing: border-box;
+}
+h1 {
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: -3px;
+}
+
+h2 {
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: -2px;
+}
+
+/* unvisited link */
+a:link {
+  color: darkblue;
+}
+
+/* visited link */
+a:visited {
+  color: darkblue;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+  background-color: darkblue;
+  transition: 2s;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 30px;
+  text-align: center;
+}
+
+.flex-item-left {
+  background-color: lightblue;
+  padding: 10px;
+  flex: 50%;
+}
+
+.flex-item-right {
+  background-color: lightseagreen;
+  padding: 10px;
+  flex: 50%;
+}
+
+/* Responsive layout - makes a one column-layout instead of a two-column layout */
+@media (max-width: 800px) {
+  .flex-item-right, .flex-item-left {
+    flex: 100%;
+  }
+
+h1 {
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: -1px;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: -1px;
+}
+}
+</style>
+</head>
+<body>
+
+<h1>Responsive Flexbox</h1>
+
+<h2>In this example, we change the percentage of flex to create different layouts for different screen sizes.</h2>
+<p><b>Resize the browser window to see that the direction changes when the 
+screen size is 800px wide or smaller.</b> Did you know the default paragraph font size is <a href="http://pxtoem.com/">16px which is 12pt?</a></p>
+
+<div class="flex-container">
+  <div class="flex-item-left">1</div>
+  <div class="flex-item-right">2</div>
+</div>
+
+</body>
+</html>
+
